@@ -17,11 +17,6 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(zlib_repo)
 
-set(ZLIB_LIBRARY ${zlib_repo_BINARY_DIR})
-set(ZLIB_INCLUDE_DIR ${zlib_repo_SOURCE_DIR} ${zlib_repo_BINARY_DIR})
-message("zlib_repo_SOURCE_DIR  ${zlib_repo_SOURCE_DIR})")
-message("zlib_repo_BINARY_DIR  ${zlib_repo_BINARY_DIR})")
-
 # app_zlib
 add_executable(app_zlib app_z.cpp)
 target_link_libraries(app_zlib zlib)
